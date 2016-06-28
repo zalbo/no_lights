@@ -58,27 +58,20 @@ if (navigator.getUserMedia) {
 
           var average = values / length;
 
-          if ((average < min_value) || (min_value == null ) ){
-            min_value = average ;
-          }
-
-          if ((average > max_value) || (max_value == null ) ){
-            max_value = average ;
-          }
 
 
 
 
 
-          function flash() {
-            document.getElementById('strobo').style.display = 'block';
-          }
-
-          if ((average > max_value) || (max_value == null ) ){
-
-            max_value = average ;
-          }
         } // end fn stream
+
+        
+        beat_detection = ogni 3 secondi inseriesce in un array la variabile average (riga 59)
+
+
+        function flash() {
+          document.getElementById('strobo').style.display = 'block';
+        }
 
     },
     function(err) {
